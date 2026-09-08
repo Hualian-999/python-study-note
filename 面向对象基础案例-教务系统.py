@@ -83,7 +83,7 @@ class EduManagement:
 
                 # 验证成绩范围(0-100)
                 if 0 <= chinese <= 100 and 0 <= math <= 100 and 0 <= english <= 100:
-                    s.update_score(chinese,math,english)   #待解释
+                    s.update_score(chinese,math,english)   
                     print("学生信息修改成功~")
                     print(f"修改后的成绩:{s}")
                     return

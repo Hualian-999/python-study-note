@@ -75,7 +75,7 @@ class CartManagement:
                 print("该商品已存在,添加失败!")
                 return
 
-        #方式一--->存在bug
+        #方式一--->存在bug,无法处理输入非大于0的数字的情况
         # price=float(input("请输入要添加的商品价格:"))
         # quantity=int(input("请输入要添加的商品数量:"))
         #
@@ -87,7 +87,7 @@ class CartManagement:
         # else:
         #     print("商品价格和数量必须大于0!")
 
-        # 方式二:使用校验函数获取价格、数量
+        # 方式二:使用校验函数获取价格、数量--->拓展
         price = self.get_valid_price("请输入要添加的商品价格:")
         quantity = self.get_valid_quantity("请输入要添加的商品数量:")
 
@@ -103,7 +103,7 @@ class CartManagement:
             if i.name==name:
                 print(f"当前商品信息:{i}")
 
-                #方式一--->存在bug
+                #方式一--->存在bug,无法处理输入非正整数的情况
                 # price = float(input("请输入要修改的商品价格:"))
                 # quantity = int(input("请输入要修改的商品数量:"))
                 # # 判断输入信息是否合理
@@ -116,7 +116,7 @@ class CartManagement:
                 #     print("商品价格和数量必须大于0!")
                 #     return
 
-                # 方式二:使用校验函数
+                # 方式二:使用校验函数-->拓展
                 price = self.get_valid_price("请输入要修改的商品价格:")
                 quantity = self.get_valid_quantity("请输入要修改的商品数量:")
 
